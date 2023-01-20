@@ -6,16 +6,14 @@ public class Verein {
     private double vermoegen;
     public Stadion stadion;
     public Trikot trikot;
-    public Mannschaft mannschaft;
 
-    public Verein(String name, int gruendungsjahr, double vermoegen, Stadion stadion, Trikot trikot, Mannschaft mannschaft)
+    public Verein(String name, int gruendungsjahr, double vermoegen, Stadion stadion, Trikot trikot)
     {
         this.name = name;
         this.gruendungsjahr = gruendungsjahr;
         this.vermoegen = vermoegen;
         this.stadion = stadion;
         this.trikot = trikot;
-        this.mannschaft = mannschaft;
     }
 
     public void Information() //zeigt Informationen über den Verein an
@@ -62,6 +60,4 @@ public class Verein {
     public void setStadion(Stadion stadion) {this.stadion = stadion;}
     public Trikot getTrikot() {return trikot;}
     public void setTrikot(Trikot trikot) {this.trikot = trikot;}
-    public Mannschaft getMannschaft() {return mannschaft;}
-    public void setMannschaft(Mannschaft mannschaft) {this.mannschaft = mannschaft;}
 }
