@@ -4,12 +4,19 @@ public class Verein {
     public String name;
     private int gruendungsjahr;
     private double vermoegen;
-    public int rating;
     public Stadion stadion;
     public Trikot trikot;
     public Mannschaft mannschaft;
 
-    public Verein() {}
+    public Verein(String name, int gruendungsjahr, double vermoegen, Stadion stadion, Trikot trikot, Mannschaft mannschaft)
+    {
+        this.name = name;
+        this.gruendungsjahr = gruendungsjahr;
+        this.vermoegen = vermoegen;
+        this.stadion = stadion;
+        this.trikot = trikot;
+        this.mannschaft = mannschaft;
+    }
 
     public void Information() //zeigt Informationen über den Verein an
     {
@@ -51,8 +58,6 @@ public class Verein {
     public void setVermoegen(double vermoegen) {this.vermoegen = vermoegen;}
     public int getGruendungsjahr() {return gruendungsjahr;}
     public void setGruendungsjahr(int gruendungsjahr) {this.gruendungsjahr = gruendungsjahr;}
-    public int getRating() {return rating;}
-    public void setRating(int rating) {this.rating = rating;}
     public Stadion getStadion() {return stadion;}
     public void setStadion(Stadion stadion) {this.stadion = stadion;}
     public Trikot getTrikot() {return trikot;}
