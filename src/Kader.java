@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class Kader {
 
@@ -24,11 +26,22 @@ public class Kader {
     }*/
   public static void showKader()
   {
-      System.out.println("+++KADER+++");
+      System.out.println("+++++++++KADER+++++++++");
       for (int i = 0; i < kader.size(); i++)
       {
-          System.out.println("         Name    | Alter | Marktwert | Position | Verletzt?");
-          System.out.println("#" + i + "    " + kader.get(i).getName() + " |  " + kader.get(i).getAlter() + "   |   " + kader.get(i).getMarktwert() +"mil  |    " + kader.get(i).getPosition()+ "    | " +kader.get(i).isVerletzt());
+          Collections.sort(kader, (a, b) -> Integer.valueOf(a.getNummer()).compareTo(b.getNummer()));
+
+          System.out.print(
+                  "#" + kader.get(i).getNummer() +
+                  "     Name: " + kader.get(i).getName()
+                  +
+                  "     Alter: " + kader.get(i).getAlter()
+                  +
+                  "     Marktwert: " + kader.get(i).getMarktwert() + " Mio. €"
+                  +
+                  "     Position: " + kader.get(i).getPosition()
+                  +
+                  "     Verletzt?: " + kader.get(i).isVerletzt());
       }
   }
 

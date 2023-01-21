@@ -1,12 +1,14 @@
 public class Spieler {
 
+    private int nummer;
     private String name;
     private int alter;
     private double marktwert;
     private String position;
     private boolean verletzt;
-    public Spieler(String name, int alter, double marktwert, String position, boolean verletzt){
+    public Spieler(String name,int nummer, int alter, double marktwert, String position, boolean verletzt){
         this.name = name;
+        this.nummer = nummer;
         this.alter = alter;
         this.marktwert = marktwert;
         this.position = position;
@@ -75,4 +77,11 @@ public class Spieler {
         this.verletzt = verletzt;
     }
 
+    public int getNummer() {
+        return nummer;
+    }
+
+    public void setNummer(int nummer) {
+        this.nummer = nummer;
+    }
 }

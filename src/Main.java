@@ -14,7 +14,7 @@ public class Main {
         Verein kaiserslautern = new Verein("1. FC K'lautern",1900,13.13, betze, fck);
         Verein waldhofmannheim = new Verein("SV Waldhof Mannheim 07",1907,6.3,carlbenzstadion,svw);
 
-        Spieler robin = new Spieler("Robin Kühn",21,3,"ST",false);
+        Spieler robin = new Spieler("Robin Kühn",11,21,3,"ST",false);
 
         Kader.zumKaderHinzufügen(robin);
         Kader.showKader();
