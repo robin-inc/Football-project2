@@ -7,12 +7,12 @@ public class Personal {
     public boolean verlezt;
     public boolean kapitan;
 
-    public Personal(String name, int alter, double marktwert, String aufgabe, boolean verlezt, boolean kapitan){
+    public Personal(String name, int alter, double marktwert, String aufgabe, boolean verletzt, boolean kapitan){
         this.name = name;
         this.alter = alter;
         this.marktwert = marktwert;
         this.aufgabe = aufgabe;
-        this.verlezt = verlezt;
+        this.verlezt = verletzt;
         this.kapitan = kapitan;
     }
 
@@ -20,14 +20,12 @@ public class Personal {
 
 
     public void status(){
-
         System.out.println("Name des " + aufgabe +"s: " + name);
         System.out.println("Alter des " + aufgabe + "s: " + alter);
         System.out.println("Marktwert des " + aufgabe + "s: " + marktwert);
         System.out.println("Aufgabe des Personals: " + aufgabe);
         System.out.println("Ist der " + aufgabe + " verletzt? " + verlezt);
         System.out.println("Ist der " + aufgabe + " Kapitän? " + kapitan);
-
     }
 
     public static void Compare(Personal a, Personal b){
