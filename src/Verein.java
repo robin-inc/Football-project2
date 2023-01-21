@@ -6,6 +6,7 @@ public class Verein {
     private double vermoegen_in_millionen;
     public Stadion stadion;
     public Trikot trikot;
+    private static ArrayList<Verein> vereins_register = new ArrayList<>();
 
     public Verein(String name, int gruendungsjahr, double vermoegen_in_millionen, Stadion stadion, Trikot trikot)
     {
@@ -35,19 +36,26 @@ public class Verein {
         else {System.out.println("Der Verein " + b.name + " ist wohlhabender als " + a.name + ".");}
     }
 
-    public void addToList(Verein e, ArrayList<Verein> vereins_liste)
-    {
-        vereins_liste.add(e);}
+    public static void addToRegister(Verein e)
+    {vereins_register.add(e);}
 
-    public void removeFromList(Verein e, ArrayList<Verein> vereins_liste)
-    {
-        vereins_liste.remove(e);}
+    public static void removeFromRegister(Verein e)
+    {vereins_register.remove(e);}
 
-    public static void Register(ArrayList<Verein> vereins_liste)
+    public static void showRegister()
     {
-        System.out.println("+++REGISTER+++\n" + vereins_liste.toString());
+        System.out.println("+++REGISTER+++");
+        for (int i = 0; i < vereins_register.size(); i++)
+        {
+            System.out.println("#" + i + " -> " + vereins_register.get(i).getName());
+        }
     }
 
+    public static void showSpecificClub(int index)
+    {
+        Verein showable = vereins_register.get(index);
+        showable.Information();
+    }
 
 
 
