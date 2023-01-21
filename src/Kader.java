@@ -26,11 +26,11 @@ public class Kader {
     }*/
   public static void showKader()
   {
-      System.out.println("+++++++++KADER+++++++++");
+      System.out.print("+++++++++KADER+++++++++");
       for (int i = 0; i < kader.size(); i++)
       {
           Collections.sort(kader, (a, b) -> Integer.valueOf(a.getNummer()).compareTo(b.getNummer()));
-
+          System.out.println();
           System.out.print(
                   "#" + kader.get(i).getNummer() +
                   "     Name: " + kader.get(i).getName()
@@ -43,6 +43,8 @@ public class Kader {
                   +
                   "     Verletzt?: " + kader.get(i).isVerletzt());
       }
+
+      Collections.sort(kader, (a, b) -> Integer.valueOf(a.getNummer()).compareTo(b.getNummer()));
   }
 
     public static void zumKaderHinzufügen(Spieler s)

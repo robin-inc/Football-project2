@@ -47,7 +47,7 @@ public class Verein {
         System.out.println("+++REGISTER+++");
         for (int i = 0; i < vereins_register.size(); i++)
         {
-            System.out.println("#" + i + " -> " + vereins_register.get(i).getName());
+            System.out.println("ID" + i + " -> " + vereins_register.get(i).getName());
         }
     }
 
