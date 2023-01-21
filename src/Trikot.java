@@ -3,33 +3,32 @@ public class Trikot {
         private String Sponsor;
         private String Farbe;
         private int Nummer;
-        private boolean waschen;
+        private boolean dreckig;
 
 
-        public Trikot(String Sponsor, String Farbe, int Nummer, boolean waschen){
+        public Trikot(String Sponsor, String Farbe /*boolean dreckig*/){
             this.Sponsor = Sponsor;
             this.Farbe = Farbe;
-            this.Nummer = Nummer;
-            this.waschen = waschen;
+            //this.dreckig = dreckig;
         }
 
         public void addToList(Trikot a, ArrayList<Trikot> trikot_liste){
             trikot_liste.add(a);
         }
-
         public void removeFromList(Trikot a, ArrayList<Trikot> trikot_liste) {
             trikot_liste.remove(a);
         }
-        private void trikotDreckig(){
 
-            if(waschen == true){
+        private void trikotWaschen(){
+
+            if(dreckig == true){
                 System.out.println("Das Trikot wurde gewaschen und ist jetzt wieder Sauber.");
 
 
-            } else if (waschen == false) {
+            } else if (dreckig == false) {
                 System.out.println("Das Trikot ist sauber und muss nicht gewaschen werden.");
             }
-            waschen = false;
+            dreckig = false;
         }
 
         public String getSponsor() {
@@ -53,10 +52,10 @@ public class Trikot {
             Nummer = NummerSET;
         }
 
-        public boolean getWaschen() {
-            return waschen;
+        public boolean getDreckig() {
+            return dreckig;
         }
-        public void setWaschen(boolean waschenSET) {
-            waschen = waschenSET;
+        public void setDreckig(boolean waschenSET) {
+            dreckig = waschenSET;
         }
 }

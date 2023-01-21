@@ -7,8 +7,10 @@
     <list default="true" id="e94e0131-41ff-4b9d-aa22-987efddfb148" name="Changes" comment="Verein Update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Personal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Personal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Stadion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stadion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Verein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/String.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trikot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trikot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Verein.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Verein.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

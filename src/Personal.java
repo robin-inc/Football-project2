@@ -4,7 +4,7 @@ public class Personal {
     private int alter;
     public double marktwert;
     public String aufgabe;
-    public boolean verlezt;
+    public boolean verletzt;
     public boolean kapitan;
 
     public Personal(String name, int alter, double marktwert, String aufgabe, boolean verletzt, boolean kapitan){
@@ -12,19 +12,19 @@ public class Personal {
         this.alter = alter;
         this.marktwert = marktwert;
         this.aufgabe = aufgabe;
-        this.verlezt = verletzt;
+        this.verletzt = verletzt;
         this.kapitan = kapitan;
     }
 
 
 
 
-    public void status(){
+    public void Information(){
         System.out.println("Name des " + aufgabe +"s: " + name);
         System.out.println("Alter des " + aufgabe + "s: " + alter);
         System.out.println("Marktwert des " + aufgabe + "s: " + marktwert);
         System.out.println("Aufgabe des Personals: " + aufgabe);
-        System.out.println("Ist der " + aufgabe + " verletzt? " + verlezt);
+        System.out.println("Ist der " + aufgabe + " verletzt? " + verletzt);
         System.out.println("Ist der " + aufgabe + " Kapitän? " + kapitan);
     }
 

@@ -1,51 +1,53 @@
+import javax.sound.midi.Soundbank;
 import java.util.Random;
     public class Stadion {
         public String name;
-        private String vereinsname;
         private int baujahr;
-        private int zuschauerzahl;
+        private int capacity;
 
-        public Stadion(String name, String vereinsname, int baujahr, int zuschauerzahl) {
+        public Stadion(String name, int baujahr, int capacity) {
             this.name = name;
-            this.vereinsname = vereinsname;
             this.baujahr = baujahr;
-            this.zuschauerzahl = zuschauerzahl;
+            this.capacity = capacity;
         }
 
-        public void displayAttributes() {
-            System.out.println(this.name);
-            System.out.println(this.vereinsname);
-            System.out.println(this.baujahr);
-            System.out.println(this.zuschauerzahl);
+        public void Information() {
+            System.out.println("+++STADIONPROFIL+++");
+            System.out.println("Name: " + this.name);
+            System.out.println("Baujahr: " + this.baujahr);
+            System.out.println("Kapazität: " + this.capacity);
+            System.out.println("-------------------");
         }
 
         public void Stadionauslastung() {
             Random rd = new Random();
-            int r = rd.nextInt(this.zuschauerzahl - 10000, this.zuschauerzahl + 1);
-            int durchschnitt = r * 100 / this.zuschauerzahl;
-            if (durchschnitt >= 10) {
-                System.out.println("AUSVERKAUFT!!");
+            int r = rd.nextInt(this.capacity - 15000, this.capacity + 1);
+            int durchschnitt = r * 100 / this.capacity;
+            if (durchschnitt >= 95) {
+                System.out.println(" >95% -> AUSVERKAUFT!");
             } else {
-                System.out.println("" + durchschnitt + "% der Tickets wurden verkauft!");
+                System.out.println("" + durchschnitt + "% der Tickets wurden am letzten Spieltag verkauft!");
             }
-
         }
 
         public static void Compare(Stadion a, Stadion b) {
+
+            int differenz = a.capacity - b.capacity;
+
+            System.out.println("+++STADIONVERGLEICH+++");
             if (a.baujahr < b.baujahr) {
-                System.out.println(a.name + " ist älter als " + b.name + " !");
+                System.out.println(">>> Das " + a.name + " ist älter als das " + b.name + "!");
+                System.out.println("[Das " + a.name + " wurde bereits im Jahre " + a.baujahr + " errichtet, das " + b.name + " hingegen im Jahre " + b.baujahr + ".]");
             } else {
-                System.out.println(b.name + " ist älter als " + a.name + " !");
+                System.out.println(">>> Das " + b.name + " ist älter als das " + a.name + "!");
+                System.out.println("[Das " + b.name + " wurde bereits im Jahre " + b.baujahr + " errichtet, das " + a.name + " hingegen im Jahre " + a.baujahr + ".]");
             }
-
-            if (a.zuschauerzahl < b.zuschauerzahl) {
-                System.out.println(b.name + " hat mehr Plätze als " + a.name);
-                System.out.println("......................");
+            if (a.capacity < b.capacity) {
+                System.out.println(">>> Das " + b.name + " hat mit einer Kapazität von " + b.capacity + ", rund " + differenz + " mehr Plätze als das " + a.name + ".");
             } else {
-                System.out.println(a.name + " hat mehr Plätze als " + b.name);
-                System.out.println("......................");
+                System.out.println(">>> Das " + a.name + " hat mit einer Kapazität von " + a.capacity + ", rund " + differenz + " mehr Plätze als das " + b.name + ".");
             }
-
+            System.out.println("-------------------");
         }
 
         public String getName() {
@@ -56,14 +58,6 @@ import java.util.Random;
             this.name = name;
         }
 
-        public String getVereinsname() {
-            return vereinsname;
-        }
-
-        public void setVereinsname(String string) {
-            this.vereinsname = string;
-        }
-
         public int getBaujahr() {
             return baujahr;
         }
@@ -72,11 +66,11 @@ import java.util.Random;
             this.baujahr = baujahr;
         }
 
-        public int getZuschauerzahl() {
-            return zuschauerzahl;
+        public int getCapacity() {
+            return capacity;
         }
 
-        public void setZuschauerzahl(int zuschauerzahl) {
-            this.zuschauerzahl = zuschauerzahl;
+        public void setCapacity(int capacity) {
+            this.capacity = capacity;
         }
     }
