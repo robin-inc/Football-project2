@@ -21,7 +21,7 @@ public class Verein {
         System.out.println("++++++++++++++++++++");
         System.out.println("Vereinsname: " + name);
         System.out.println("Gründungsjahr: " + gruendungsjahr);
-        System.out.println("Stadion: " + stadion);
+        System.out.println("Stadion: " + stadion.getName());
         System.out.println("Aktuelles Vereinsvermögen: " + vermoegen);
         System.out.println("++++++++++++++++++++");
     }
@@ -35,15 +35,17 @@ public class Verein {
         else {System.out.println("Der Verein " + b.name + " ist wohlhabender als " + a.name + ".");}
     }
 
-    public void addToList(Verein e,ArrayList<Verein> verein_liste)
-    {verein_liste.add(e);}
-
-    public void removeFromList(Verein e, ArrayList<Verein> verein_liste)
-    {verein_liste.remove(e);}
-
-    public static void Register(ArrayList<Verein> verein_liste)
+    public void addToList(Verein e, ArrayList<Verein> vereins_liste)
     {
-        System.out.println("+++REGISTER+++\n" + verein_liste.toString());
+        vereins_liste.add(e);}
+
+    public void removeFromList(Verein e, ArrayList<Verein> vereins_liste)
+    {
+        vereins_liste.remove(e);}
+
+    public static void Register(ArrayList<Verein> vereins_liste)
+    {
+        System.out.println("+++REGISTER+++\n" + vereins_liste.toString());
     }
 
 

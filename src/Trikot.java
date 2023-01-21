@@ -35,7 +35,7 @@ public class Trikot {
         public String getSponsor() {
             return Sponsor;
         }
-        public void setSponsor(String  SponsorSET) {
+        public void setSponsor(String SponsorSET) {
             Sponsor = SponsorSET;
         }
 

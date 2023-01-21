@@ -1,21 +1,20 @@
 import java.util.Random;
     public class Stadion {
-        private String name;
-        private String verein;
+        public String name;
+        private String vereinsname;
         private int baujahr;
-        Random rd = new Random();
         private int zuschauerzahl;
 
-        public Stadion(String name, String verein, int baujahr, int zuschauerzahl) {
+        public Stadion(String name, String vereinsname, int baujahr, int zuschauerzahl) {
             this.name = name;
-            this.verein = verein;
+            this.vereinsname = vereinsname;
             this.baujahr = baujahr;
             this.zuschauerzahl = zuschauerzahl;
         }
 
         public void displayAttributes() {
             System.out.println(this.name);
-            System.out.println(this.verein);
+            System.out.println(this.vereinsname);
             System.out.println(this.baujahr);
             System.out.println(this.zuschauerzahl);
         }
@@ -47,5 +46,37 @@ import java.util.Random;
                 System.out.println("......................");
             }
 
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+
+        public String getVereinsname() {
+            return vereinsname;
+        }
+
+        public void setVereinsname(String string) {
+            this.vereinsname = string;
+        }
+
+        public int getBaujahr() {
+            return baujahr;
+        }
+
+        public void setBaujahr(int baujahr) {
+            this.baujahr = baujahr;
+        }
+
+        public int getZuschauerzahl() {
+            return zuschauerzahl;
+        }
+
+        public void setZuschauerzahl(int zuschauerzahl) {
+            this.zuschauerzahl = zuschauerzahl;
         }
     }
