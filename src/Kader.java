@@ -1,11 +1,9 @@
 import java.util.ArrayList;
 
-public class Mannschaft {
+public class Kader {
 
-    private ArrayList<Personal> spieler;
-    private ArrayList<Personal> trainer;
+    private static ArrayList<Spieler> kader = new ArrayList<>();
     private String formation;
-    private int kadergroesse;
 
 
   /* public static void kaderHinzufuegen() {
@@ -24,14 +22,21 @@ public class Mannschaft {
         while (s.hasNext());
         kader.add(s.next());
     }*/
+  public static void showKader()
+  {
+      System.out.println("+++KADER+++");
+      for (int i = 0; i < kader.size(); i++)
+      {
+          System.out.println("         Name    | Alter | Marktwert | Position | Verletzt?");
+          System.out.println("#" + i + "    " + kader.get(i).getName() + " |  " + kader.get(i).getAlter() + "   |   " + kader.get(i).getMarktwert() +"mil  |    " + kader.get(i).getPosition()+ "    | " +kader.get(i).isVerletzt());
+      }
+  }
 
-    public static void addtolist(Personal a, ArrayList<Personal> mannschaft_liste) {
-        mannschaft_liste.add(a);
-    }
+    public static void zumKaderHinzufügen(Spieler s)
+    {kader.add(s);}
 
-    public static void removefromlist(Personal a, ArrayList<Personal> mannschaft_liste) {
-        mannschaft_liste.remove(a);
-    }
+    public static void ausKaderEntfernen(Spieler s)
+    {kader.remove(s);}
 
 }
 

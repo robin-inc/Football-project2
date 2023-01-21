@@ -6,7 +6,7 @@ public class Verein {
     private double vermoegen_in_millionen;
     public Stadion stadion;
     public Trikot trikot;
-    private static ArrayList<Verein> vereins_register = new ArrayList<>();
+    private static ArrayList<Verein> vereins_register = new ArrayList<>(); //erstellt ein Vereinsregister
 
     public Verein(String name, int gruendungsjahr, double vermoegen_in_millionen, Stadion stadion, Trikot trikot)
     {

@@ -14,19 +14,27 @@ public class Main {
         Verein kaiserslautern = new Verein("1. FC K'lautern",1900,13.13, betze, fck);
         Verein waldhofmannheim = new Verein("SV Waldhof Mannheim 07",1907,6.3,carlbenzstadion,svw);
 
+        Spieler robin = new Spieler("Robin Kühn",21,3,"ST",false);
+
+        Kader.zumKaderHinzufügen(robin);
+        Kader.showKader();
+
 
         /*kaiserslautern.Information();
         waldhofmannheim.Information();
         Verein.Compare(kaiserslautern,waldhofmannheim);*/
-
+        /*
         Verein.addToRegister(kaiserslautern);
         Verein.addToRegister(waldhofmannheim);
         Verein.showRegister();
 
+
         System.out.println("Über welchen Verein möchtest du dich informieren? (BITTE INDEX NUMMER ANGEBEN)");
         System.out.print("> ");
         int indexnumber = sc.nextInt();
-        Verein.showSpecificClub(indexnumber);
+        Verein.showSpecificClub(indexnumber);*/
+
+
 
 
 
