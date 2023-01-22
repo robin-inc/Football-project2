@@ -7,7 +7,7 @@ public class Verein {
     public Kader kader;
     public Stadion stadion;
     public Trikot trikot;
-    private static ArrayList<Verein> vereins_register = new ArrayList<>(); //erstellt ein Vereinsregister
+    public static ArrayList<Verein> vereins_register = new ArrayList<>(); //erstellt ein Vereinsregister
 
     public Verein(String name, int gruendungsjahr, double vermoegen_in_millionen,Kader kader, Stadion stadion, Trikot trikot)
     {
@@ -46,7 +46,7 @@ public class Verein {
 
     public static void showRegister()
     {
-        System.out.println("+++REGISTER+++");
+        System.out.println("++++++REGISTER++++++");
         for (int i = 0; i < vereins_register.size(); i++)
         {
             System.out.println("ID" + i + " -> " + vereins_register.get(i).getName());
@@ -72,4 +72,20 @@ public class Verein {
     public void setStadion(Stadion stadion) {this.stadion = stadion;}
     public Trikot getTrikot() {return trikot;}
     public void setTrikot(Trikot trikot) {this.trikot = trikot;}
+
+    public static ArrayList<Verein> getVereins_register() {
+        return vereins_register;
+    }
+
+    public static void setVereins_register(ArrayList<Verein> vereins_register) {
+        Verein.vereins_register = vereins_register;
+    }
+
+    public Kader getKader() {
+        return kader;
+    }
+
+    public void setKader(Kader kader) {
+        this.kader = kader;
+    }
 }
