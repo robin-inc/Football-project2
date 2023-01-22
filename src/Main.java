@@ -50,6 +50,7 @@ public class Main {
         Verein.addToRegister(fcb);
         Verein.addToRegister(bvb);
 
+
         Verein.showRegister();
 
 
@@ -81,11 +82,28 @@ public class Main {
                     System.out.println("Welchen Kader möchtest du einsehen? (BITTE ID NUMMER EINGEBEN)");
                     int k = sc.nextInt();
                     Verein.vereins_register.get(k).getKader().showKader();
-                    break;
+                    System.out.println("\nMöchtest du einen Spieler mit dem eines anderen Vereins vergleichen? (J/N)");
+                    char antwort = sc.next().charAt(0);
+                    Character.toLowerCase(antwort);
+                    if (antwort == 'j')
+                    {
+                        System.out.println("Welchen Spieler möchtest du vergleichen? (BITTE ID NUMMER EINGEBEN)");
+                        int s1 = sc.nextInt();
+                        System.out.println("Aus welchem Verein stammt der zweite Spieler? (BITTE ID NUMMER EINGEBEN)");
+                        Verein.showRegister();
+                        int v = sc.nextInt();
+                        Verein.vereins_register.get(v).getKader().showKader();
+                        System.out.println("\nWähle einen Spieler  (BITTE ID NUMMER EINGEBEN)");
+                        int s2 = sc.nextInt();
+                        Spieler.Compare(Verein.vereins_register.get(v).getKader().getSpieler(s2),
+                                Verein.vereins_register.get(k).getKader().getSpieler(s1));
+
+                    }
                 } else if (operation == 'x')
                 {
                     runner = false;
                 } else {System.out.println("BITTE EINE GÜLTIGE OPERATION AUSWÄHLEN!");}
+
 
         }
 
