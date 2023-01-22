@@ -31,6 +31,14 @@ public class Main {
         Spieler fcb0 = new Spieler("Manuel Neuer",1,36,12,"TW",true);
         Spieler fcb1 = new Spieler("Jamal Musiala",42,19,100,"ZOM",false);
         Spieler fcb2 = new Spieler("Thomas Müller",25,33,18,"MS",false);
+        Spieler bvb0 = new Spieler("Gregor Kobel",1,25,25,"TW",false);
+        Spieler bvb1 = new Spieler("Jude Bellingham",22,19,110,"ZM",false);
+        Spieler bvb2 = new Spieler("Marco Reus",11,33,9,"ZOM",false);
+
+        fck_kader.zumKaderHinzufügen(fck0);fck_kader.zumKaderHinzufügen(fck1);fck_kader.zumKaderHinzufügen(fck2);
+        ksc_kader.zumKaderHinzufügen(ksc0);ksc_kader.zumKaderHinzufügen(ksc1);ksc_kader.zumKaderHinzufügen(ksc2);
+        fcb_kader.zumKaderHinzufügen(fcb0);fcb_kader.zumKaderHinzufügen(fcb1);fcb_kader.zumKaderHinzufügen(fcb2);
+        bvb_kader.zumKaderHinzufügen(bvb0);bvb_kader.zumKaderHinzufügen(bvb1);bvb_kader.zumKaderHinzufügen(bvb2);
 
         Verein fck = new Verein("1. FC Kaiserslautern",1900,13.13, fck_kader, betze, fck_trikot);
         Verein ksc = new Verein("Karlsruher SC", 1952, 18.55, ksc_kader,wildparkstadion,ksc_trikot);
@@ -73,6 +81,7 @@ public class Main {
                     System.out.println("Welchen Kader möchtest du einsehen? (BITTE ID NUMMER EINGEBEN)");
                     int k = sc.nextInt();
                     Verein.vereins_register.get(k).getKader().showKader();
+                    break;
                 } else if (operation == 'x')
                 {
                     runner = false;
