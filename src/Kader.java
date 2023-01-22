@@ -4,7 +4,7 @@ import java.util.Comparator;
 
 public class Kader {
 
-    private static ArrayList<Spieler> kader = new ArrayList<>();
+    private  ArrayList<Spieler> kader = new ArrayList<>();
     private String formation;
 
 
@@ -24,7 +24,7 @@ public class Kader {
         while (s.hasNext());
         kader.add(s.next());
     }*/
-  public static void showKader()
+  public void showKader()
   {
       System.out.print("+++++++++KADER+++++++++");
       for (int i = 0; i < kader.size(); i++)
@@ -47,10 +47,10 @@ public class Kader {
       Collections.sort(kader, (a, b) -> Integer.valueOf(a.getNummer()).compareTo(b.getNummer()));
   }
 
-    public static void zumKaderHinzufügen(Spieler s)
+    public void zumKaderHinzufügen(Spieler s)
     {kader.add(s);}
 
-    public static void ausKaderEntfernen(Spieler s)
+    public void ausKaderEntfernen(Spieler s)
     {kader.remove(s);}
 
 }

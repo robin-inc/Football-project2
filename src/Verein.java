@@ -4,15 +4,17 @@ public class Verein {
     public String name;
     private int gruendungsjahr;
     private double vermoegen_in_millionen;
+    public Kader kader;
     public Stadion stadion;
     public Trikot trikot;
     private static ArrayList<Verein> vereins_register = new ArrayList<>(); //erstellt ein Vereinsregister
 
-    public Verein(String name, int gruendungsjahr, double vermoegen_in_millionen, Stadion stadion, Trikot trikot)
+    public Verein(String name, int gruendungsjahr, double vermoegen_in_millionen,Kader kader, Stadion stadion, Trikot trikot)
     {
         this.name = name;
         this.gruendungsjahr = gruendungsjahr;
         this.vermoegen_in_millionen = vermoegen_in_millionen;
+        this.kader = kader;
         this.stadion = stadion;
         this.trikot = trikot;
     }
