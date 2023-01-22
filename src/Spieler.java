@@ -26,9 +26,9 @@ public class Spieler {
 
     public static void Compare(Spieler a, Spieler b){
         if (a.marktwert < b.marktwert)
-        {System.out.println("Spieler " + b.name + " hat einen höheren Marktwert ("+ b.getMarktwert() + ") als " + a.name + " (" + a.getMarktwert() + ").");
+        {System.out.println("Spieler " + b.name + " hat einen höheren Marktwert ("+ b.getMarktwert() + " Mio. €) als " + a.name + " (" + a.getMarktwert() + ").");
         }
-        else {System.out.println("Spieler " + a.name + " hat einen höheren Marktwert ("+ a.getMarktwert() + ") als " + b.name + " (" + b.getMarktwert() + ").");
+        else {System.out.println("Spieler " + a.name + " hat einen höheren Marktwert ("+ a.getMarktwert() + " Mio. €) als " + b.name + " (" + b.getMarktwert() + ").");
         }
         if (a.alter > b.alter){
             System.out.println("Spieler " + a.name + " (" + a.alter + ") ist älter als " + b.name + " (" + b.alter +").");

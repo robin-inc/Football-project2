@@ -32,7 +32,7 @@ import java.util.Random;
 
         public static void Compare(Stadion a, Stadion b) {
 
-            int differenz = a.capacity - b.capacity;
+            int differenz = Math.abs(a.capacity - b.capacity);
 
             System.out.println("+++STADIONVERGLEICH+++");
             if (a.baujahr < b.baujahr) {
@@ -43,9 +43,9 @@ import java.util.Random;
                 System.out.println("[Das " + b.name + " wurde bereits im Jahre " + b.baujahr + " errichtet, das " + a.name + " hingegen im Jahre " + a.baujahr + ".]");
             }
             if (a.capacity < b.capacity) {
-                System.out.println(">>> Das " + b.name + " hat mit einer Kapazität von " + b.capacity + ", rund " + differenz + " mehr Plätze als das " + a.name + ".");
+                System.out.println(">>> Das " + b.name + " hat mit einer Kapazität von " + b.capacity + ", rund " + differenz + " Plätze mehr als das " + a.name + ".");
             } else {
-                System.out.println(">>> Das " + a.name + " hat mit einer Kapazität von " + a.capacity + ", rund " + differenz + " mehr Plätze als das " + b.name + ".");
+                System.out.println(">>> Das " + a.name + " hat mit einer Kapazität von " + a.capacity + ", rund " + differenz + " Plätze mehr als das " + b.name + ".");
             }
             System.out.println("-------------------");
         }

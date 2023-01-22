@@ -6,10 +6,10 @@ public class Trikot {
         private boolean dreckig;
 
 
-        public Trikot(String Sponsor, String Farbe /*boolean dreckig*/){
+        public Trikot(String Sponsor, String Farbe, boolean dreckig){
             this.Sponsor = Sponsor;
             this.Farbe = Farbe;
-            //this.dreckig = dreckig;
+            this.dreckig = dreckig;
         }
 
         public void addToList(Trikot a, ArrayList<Trikot> trikot_liste){

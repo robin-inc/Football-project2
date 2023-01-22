@@ -12,10 +12,10 @@ public class Main {
         Stadion allianzarena = new Stadion("Allianz-Arena",2002,57343);
         Stadion signalidunapark = new Stadion("Signal Iduna Park",1971,81365);
 
-        Trikot fck_trikot = new Trikot("Allgäuer Latschenkiefer","rot");
-        Trikot ksc_trikot = new Trikot("GEM", "blau");
-        Trikot fcb_trikot = new Trikot("Telekom", "rot");
-        Trikot bvb_trikot = new Trikot("1&1", "gelb");
+        Trikot fck_trikot = new Trikot("Allgäuer Latschenkiefer","rot",false);
+        Trikot ksc_trikot = new Trikot("GEM", "blau",true);
+        Trikot fcb_trikot = new Trikot("Telekom", "rot",true);
+        Trikot bvb_trikot = new Trikot("1&1", "gelb",false);
 
         Kader fck_kader = new Kader();
         Kader ksc_kader = new Kader();
@@ -65,27 +65,47 @@ public class Main {
             );
 
                 char operation = sc.next().charAt(0);
-                Character.toLowerCase(operation);
+                char c = Character.toLowerCase(operation);
 
-                if (operation == 'i') {
+            if (c == 'i') {
                     System.out.println("Über welchen Verein möchtest du dich informieren? (BITTE ID NUMMER EINGEBEN)");
                     int id = sc.nextInt();
                     Verein.showSpecificClub(id);
-                } else if (operation == 'v') {
+                    System.out.println("Möchtest du dich über das dazugehörige Stadion informieren? (J/N)");
+                    char antwort = sc.next().charAt(0);
+                    char c1 = Character.toLowerCase(antwort);
+                    if (c1 == 'j')
+                    {
+                        Verein.vereins_register.get(id).getStadion().Information();
+                        System.out.println("Möchtest das Stadion mit dem eines anderen Vereins vergleichen? (J/N)");
+                        antwort = sc.next().charAt(0);
+                        c1 = Character.toLowerCase(antwort);
+                        if (c1 == 'j')
+                        {
+                            System.out.println("Von welchem Verein ist das Stadion?");
+                            Verein.showRegister();
+                            int v = sc.nextInt();
+                            Stadion.Compare(Verein.vereins_register.get(v).getStadion(),
+                                    Verein.vereins_register.get(id).getStadion());
+
+                        }
+                    }
+
+            } else if (c == 'v') {
                     System.out.println("Welche Vereine möchtest du miteinander vergleichen? (BITTE ID NUMMER EINGEBEN)");
                     System.out.print("Erster Verein: ");
                     int v1 = sc.nextInt();
                     System.out.print("Zweiter Verein: ");
                     int v2 = sc.nextInt();
                     Verein.Compare(Verein.vereins_register.get(v1), Verein.vereins_register.get(v2));
-                } else if (operation == 'k') {
+                } else if (c == 'k') {
                     System.out.println("Welchen Kader möchtest du einsehen? (BITTE ID NUMMER EINGEBEN)");
                     int k = sc.nextInt();
                     Verein.vereins_register.get(k).getKader().showKader();
                     System.out.println("\nMöchtest du einen Spieler mit dem eines anderen Vereins vergleichen? (J/N)");
                     char antwort = sc.next().charAt(0);
-                    Character.toLowerCase(antwort);
-                    if (antwort == 'j')
+                    char c1 = Character.toLowerCase(antwort);
+                if (c1 == 'j')
                     {
                         System.out.println("Welchen Spieler möchtest du vergleichen? (BITTE ID NUMMER EINGEBEN)");
                         int s1 = sc.nextInt();
@@ -97,12 +117,11 @@ public class Main {
                         int s2 = sc.nextInt();
                         Spieler.Compare(Verein.vereins_register.get(v).getKader().getSpieler(s2),
                                 Verein.vereins_register.get(k).getKader().getSpieler(s1));
-
                     }
-                } else if (operation == 'x')
+                } else if (c == 'x')
                 {
                     runner = false;
-                } else {System.out.println("BITTE EINE GÜLTIGE OPERATION AUSWÄHLEN!");}
+                } else {System.out.println("###BITTE EINE GÜLTIGE OPERATION AUSWÄHLEN!###");}
 
 
         }

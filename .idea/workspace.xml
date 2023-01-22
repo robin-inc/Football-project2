@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e94e0131-41ff-4b9d-aa22-987efddfb148" name="Changes" comment="Update WE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Kader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Kader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Spieler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Spieler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Stadion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Stadion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Trikot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Trikot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674400540905</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Update WE">
+      <created>1674415369073</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1674415369073</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
